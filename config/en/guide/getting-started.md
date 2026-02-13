@@ -1,24 +1,24 @@
 # Getting Started
 
-Switch your existing OpenAI API calls to MindRouter intelligent routing in just 5 minutes.
+Switch your existing OpenAI API calls to TierFlow intelligent routing in just 5 minutes.
 
 ## Prerequisites
 
 - Experience with any LLM API
 - Python 3.8+ or Node.js 18+
-- A MindRouter API Key ([sign up](https://mindrouter.ai))
+- A TierFlow API Key ([sign up](https://tierflow.ai))
 
 ## Step 1: Get Your API Key
 
-Log in to the [MindRouter Console](https://mindrouter.ai/console) and create a new key on the "API Keys" page:
+Log in to the [TierFlow Console](https://tierflow.ai/console) and create a new key on the "API Keys" page:
 
 ```
-MINDROUTER_API_KEY=mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx
+TIERFLOW_API_KEY=tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## Step 2: Replace Base URL
 
-MindRouter is OpenAI API compatible. Just change `base_url` and `api_key` — no other code changes needed.
+TierFlow is OpenAI API compatible. Just change `base_url` and `api_key` — no other code changes needed.
 
 ### Python (OpenAI SDK)
 
@@ -26,12 +26,12 @@ MindRouter is OpenAI API compatible. Just change `base_url` and `api_key` — no
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
-    base_url="https://api.mindrouter.ai/v1"
+    api_key="tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
+    base_url="https://api.tierflow.ai/v1"
 )
 
 response = client.chat.completions.create(
-    model="auto",  # MindRouter auto-selects the optimal model
+    model="auto",  # TierFlow auto-selects the optimal model
     messages=[
         {"role": "user", "content": "Explain vector databases in one sentence"}
     ]
@@ -46,12 +46,12 @@ print(response.choices[0].message.content)
 import OpenAI from "openai";
 
 const client = new OpenAI({
-    apiKey: "mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
-    baseURL: "https://api.mindrouter.ai/v1"
+    apiKey: "tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
+    baseURL: "https://api.tierflow.ai/v1"
 });
 
 const response = await client.chat.completions.create({
-    model: "auto",  // MindRouter auto-selects the optimal model
+    model: "auto",  // TierFlow auto-selects the optimal model
     messages: [
         { role: "user", content: "Explain vector databases in one sentence" }
     ]
@@ -63,8 +63,8 @@ console.log(response.choices[0].message.content);
 ### cURL
 
 ```bash
-curl https://api.mindrouter.ai/v1/chat/completions \
-  -H "Authorization: Bearer mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx" \
+curl https://api.tierflow.ai/v1/chat/completions \
+  -H "Authorization: Bearer tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "auto",
@@ -76,7 +76,7 @@ curl https://api.mindrouter.ai/v1/chat/completions \
 
 ## Step 3: Understand Routing Modes
 
-MindRouter offers three routing modes via the `model` field:
+TierFlow offers three routing modes via the `model` field:
 
 | Mode | model Value | Description |
 |------|-------------|-------------|
@@ -126,7 +126,7 @@ Every API response includes routing metadata showing which model was used and th
     "completion_tokens": 42,
     "total_tokens": 67
   },
-  "mindrouter": {
+  "tierflow": {
     "requested_model": "auto",
     "routed_model": "gpt-4o-mini",
     "route_reason": "simple_query",
@@ -148,7 +148,7 @@ Key fields:
 
 ## Step 5: View the Dashboard
 
-Log in to the [MindRouter Console](https://mindrouter.ai/console) to view:
+Log in to the [TierFlow Console](https://tierflow.ai/console) to view:
 
 - **Request Distribution**: Percentage breakdown of requests routed to each model
 - **Cost Trends**: Daily/weekly API spend over time
@@ -157,7 +157,7 @@ Log in to the [MindRouter Console](https://mindrouter.ai/console) to view:
 
 ## FAQ
 
-### Does MindRouter affect response quality?
+### Does TierFlow affect response quality?
 
 No. The routing engine evaluates each request's complexity and only downgrades when a lighter model can handle it. You can set quality floor thresholds in the console.
 

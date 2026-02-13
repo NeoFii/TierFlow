@@ -4,3 +4,4 @@ config/.vitepress/dist
 .DS_Store
 *.log
 .claude
+pnpm-lock.yaml

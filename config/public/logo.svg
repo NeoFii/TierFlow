@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <rect width="200" height="200" rx="40" fill="url(#bg)"/>
+
+  <!-- 中心节点 -->
+  <circle cx="100" cy="100" r="20" fill="white"/>
+  <circle cx="100" cy="100" r="12" fill="url(#bg)"/>
+
+  <!-- 外围节点与连线 -->
+  <circle cx="100" cy="50" r="10" fill="white" fill-opacity="0.9"/>
+  <circle cx="140" cy="80" r="10" fill="white" fill-opacity="0.7"/>
+  <circle cx="140" cy="120" r="10" fill="white" fill-opacity="0.5"/>
+  <circle cx="100" cy="150" r="10" fill="white" fill-opacity="0.9"/>
+  <circle cx="60" cy="120" r="10" fill="white" fill-opacity="0.5"/>
+  <circle cx="60" cy="80" r="10" fill="white" fill-opacity="0.7"/>
+
+  <!-- 连接线 -->
+  <path d="M100 80V71M120 90L132 83M120 110L132 117M100 120V129M80 110L68 117M80 90L68 83"
+        stroke="white" stroke-width="3" stroke-linecap="round"/>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="200" y2="200">
+      <stop offset="0%" stop-color="#11998e"/>
+      <stop offset="100%" stop-color="#38ef7d"/>
+    </linearGradient>
+  </defs>
+</svg>

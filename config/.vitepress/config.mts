@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  base: '/mindrouter/',
+  base: '/tierflow/',
 
   locales: {
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'MindRouter',
+      title: 'TierFlow',
       description: 'AI 模型智能路由平台，统一 API 接入，成本直降 60%',
       themeConfig: {
         nav: [
@@ -21,7 +21,7 @@ export default defineConfig({
             {
               text: '入门',
               items: [
-                { text: '什么是 MindRouter？', link: '/guide/introduction' },
+                { text: '什么是 TierFlow？', link: '/guide/introduction' },
                 { text: '快速开始', link: '/guide/getting-started' }
               ]
             },
@@ -52,7 +52,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       link: '/en/',
-      title: 'MindRouter',
+      title: 'TierFlow',
       description: 'AI Model Intelligent Routing Platform — Unified API, 60% Cost Reduction',
       themeConfig: {
         nav: [
@@ -65,7 +65,7 @@ export default defineConfig({
             {
               text: 'Getting Started',
               items: [
-                { text: 'What is MindRouter?', link: '/en/guide/introduction' },
+                { text: 'What is TierFlow?', link: '/en/guide/introduction' },
                 { text: 'Quick Start', link: '/en/guide/getting-started' }
               ]
             },
@@ -96,7 +96,7 @@ export default defineConfig({
 
   themeConfig: {
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/NeoFii/mindrouter' }
+      { icon: 'github', link: 'https://github.com/NeoFii/tierflow' }
     ],
     search: {
       provider: 'local'

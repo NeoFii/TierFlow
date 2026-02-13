@@ -1,6 +1,6 @@
-# 什么是 MindRouter？
+# 什么是 TierFlow？
 
-MindRouter 是一个 **AI 模型智能路由平台**。我们接入了 OpenAI、Anthropic、Google、DeepSeek、Mistral 等主流大模型供应商的 API，通过统一的接口为开发者提供服务。
+TierFlow 是一个 **AI 模型智能路由平台**。我们接入了 OpenAI、Anthropic、Google、DeepSeek、Mistral 等主流大模型供应商的 API，通过统一的接口为开发者提供服务。
 
 核心价值：**在不降低输出质量的前提下，通过智能路由将 API 调用成本降低最高 60%。**
 
@@ -15,10 +15,10 @@ MindRouter 是一个 **AI 模型智能路由平台**。我们接入了 OpenAI、
 | **供应商锁定** | 每个厂商 API 格式不同，切换成本高，一旦绑定就很难迁移 |
 | **可用性风险** | 单一供应商出现故障或限流时，业务直接中断 |
 
-## MindRouter 如何解决
+## TierFlow 如何解决
 
 ```
-用户请求 → MindRouter 路由引擎 → 分析任务复杂度
+用户请求 → TierFlow 路由引擎 → 分析任务复杂度
                                       ↓
                               ┌───────────────────┐
                               │  路由决策引擎      │
@@ -44,7 +44,7 @@ MindRouter 是一个 **AI 模型智能路由平台**。我们接入了 OpenAI、
 
 ## 路由决策依据
 
-MindRouter 基于以下多维指标进行路由决策：
+TierFlow 基于以下多维指标进行路由决策：
 
 ### 性能指标
 

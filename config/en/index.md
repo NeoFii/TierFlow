@@ -2,18 +2,18 @@
 layout: home
 
 hero:
-  name: MindRouter
+  name: TierFlow
   text: AI Model Intelligent Routing Platform
   tagline: Unified API access, smart model selection — same quality, 60% lower cost
   image:
     src: /logo.svg
-    alt: MindRouter
+    alt: TierFlow
   actions:
     - theme: brand
       text: Get Started
       link: /en/guide/getting-started
     - theme: alt
-      text: Why MindRouter?
+      text: Why TierFlow?
       link: /en/guide/introduction
 
 features:
@@ -22,7 +22,7 @@ features:
     details: Automatically selects the optimal model for each request based on P90 latency, token cost, and benchmark scores — no manual switching required.
   - icon: 💰
     title: Cut Costs by 60%
-    details: Not every task needs the most powerful model. MindRouter routes simple tasks to cost-effective models and reserves flagship models for complex ones.
+    details: Not every task needs the most powerful model. TierFlow routes simple tasks to cost-effective models and reserves flagship models for complex ones.
   - icon: 🔗
     title: Unified API Interface
     details: OpenAI-compatible API format. Switch with one line of code. No need to maintain separate SDKs and credentials for each provider.
@@ -185,7 +185,7 @@ features:
 
 ## 📊 Model Capabilities & Pricing
 
-<p class="subtitle">MindRouter continuously tracks benchmark scores, API latency, and pricing to intelligently route to the optimal model</p>
+<p class="subtitle">TierFlow continuously tracks benchmark scores, API latency, and pricing to intelligently route to the optimal model</p>
 
 <div class="legend">
   <span>🏆 Best Overall</span>
@@ -420,7 +420,7 @@ features:
 
 <p style="text-align: center; margin-top: 24px; color: var(--vp-c-text-3); font-size: 13px;">
   * Data shown for illustration purposes. Actual benchmark scores and pricing are subject to each provider's official announcements.<br>
-  * Chinese model prices converted to USD at approximate rates. MindRouter continuously tracks and updates this data.
+  * Chinese model prices converted to USD at approximate rates. TierFlow continuously tracks and updates this data.
 </p>
 
 </div>

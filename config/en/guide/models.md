@@ -6,7 +6,7 @@ This page is under construction. Stay tuned!
 
 ## Supported Models
 
-MindRouter has integrated the following model providers:
+TierFlow has integrated the following model providers:
 
 ### Global Models
 

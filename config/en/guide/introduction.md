@@ -1,6 +1,6 @@
-# What is MindRouter?
+# What is TierFlow?
 
-MindRouter is an **AI model intelligent routing platform**. We integrate APIs from leading LLM providers — OpenAI, Anthropic, Google, DeepSeek, Mistral — and serve developers through a unified interface.
+TierFlow is an **AI model intelligent routing platform**. We integrate APIs from leading LLM providers — OpenAI, Anthropic, Google, DeepSeek, Mistral — and serve developers through a unified interface.
 
 Core value: **Reduce API costs by up to 60% without compromising output quality through intelligent routing.**
 
@@ -15,10 +15,10 @@ Developers using LLM APIs face several common pain points:
 | **Vendor Lock-in** | Every provider has different API formats, making migration costly |
 | **Availability Risk** | Single-provider outages or rate limits directly impact your business |
 
-## How MindRouter Solves This
+## How TierFlow Solves This
 
 ```
-User Request → MindRouter Engine → Analyze Task Complexity
+User Request → TierFlow Engine → Analyze Task Complexity
                                          ↓
                                 ┌───────────────────┐
                                 │  Routing Engine    │
@@ -45,7 +45,7 @@ User Request → MindRouter Engine → Analyze Task Complexity
 
 ## Routing Decision Factors
 
-MindRouter makes routing decisions based on multiple dimensions:
+TierFlow makes routing decisions based on multiple dimensions:
 
 ### Performance Metrics
 

@@ -8,7 +8,7 @@ export default defineConfig({
     root: {
       label: '简体中文',
       lang: 'zh-CN',
-      title: 'MindRouter',
+      title: 'TierFlow',
       description: '您的智能路由专家，更低成本',
       themeConfig: {
         // 中文导航栏
@@ -27,7 +27,7 @@ export default defineConfig({
       label: 'English',
       lang: 'en-US',
       link: '/en/', // 这个很重要！
-      title: 'MindRouter',
+      title: 'TierFlow',
       description: 'Your intelligent router expert for lower cost',
       themeConfig: {
         // 英文导航栏

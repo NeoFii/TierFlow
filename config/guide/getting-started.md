@@ -1,24 +1,24 @@
 # 快速开始
 
-只需 5 分钟，将现有的 OpenAI API 调用切换到 MindRouter 智能路由。
+只需 5 分钟，将现有的 OpenAI API 调用切换到 TierFlow 智能路由。
 
 ## 前置条件
 
 - 已有任意大模型 API 的使用经验
 - Python 3.8+ 或 Node.js 18+
-- 一个 MindRouter API Key（[注册获取](https://mindrouter.ai)）
+- 一个 TierFlow API Key（[注册获取](https://tierflow.ai)）
 
 ## 第一步：获取 API Key
 
-登录 [MindRouter 控制台](https://mindrouter.ai/console)，在「API 密钥」页面创建新的密钥：
+登录 [TierFlow 控制台](https://tierflow.ai/console)，在「API 密钥」页面创建新的密钥：
 
 ```
-MINDROUTER_API_KEY=mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx
+TIERFLOW_API_KEY=tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ## 第二步：替换 Base URL
 
-MindRouter 兼容 OpenAI API 格式。只需修改 `base_url` 和 `api_key`，无需更改其他代码。
+TierFlow 兼容 OpenAI API 格式。只需修改 `base_url` 和 `api_key`，无需更改其他代码。
 
 ### Python (OpenAI SDK)
 
@@ -26,12 +26,12 @@ MindRouter 兼容 OpenAI API 格式。只需修改 `base_url` 和 `api_key`，�
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
-    base_url="https://api.mindrouter.ai/v1"
+    api_key="tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
+    base_url="https://api.tierflow.ai/v1"
 )
 
 response = client.chat.completions.create(
-    model="auto",  # MindRouter 自动选择最优模型
+    model="auto",  # TierFlow 自动选择最优模型
     messages=[
         {"role": "user", "content": "用一句话解释什么是向量数据库"}
     ]
@@ -46,12 +46,12 @@ print(response.choices[0].message.content)
 import OpenAI from "openai";
 
 const client = new OpenAI({
-    apiKey: "mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
-    baseURL: "https://api.mindrouter.ai/v1"
+    apiKey: "tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx",
+    baseURL: "https://api.tierflow.ai/v1"
 });
 
 const response = await client.chat.completions.create({
-    model: "auto",  // MindRouter 自动选择最优模型
+    model: "auto",  // TierFlow 自动选择最优模型
     messages: [
         { role: "user", content: "用一句话解释什么是向量数据库" }
     ]
@@ -63,8 +63,8 @@ console.log(response.choices[0].message.content);
 ### cURL
 
 ```bash
-curl https://api.mindrouter.ai/v1/chat/completions \
-  -H "Authorization: Bearer mr-sk-xxxxxxxxxxxxxxxxxxxxxxxx" \
+curl https://api.tierflow.ai/v1/chat/completions \
+  -H "Authorization: Bearer tf-sk-xxxxxxxxxxxxxxxxxxxxxxxx" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "auto",
@@ -76,7 +76,7 @@ curl https://api.mindrouter.ai/v1/chat/completions \
 
 ## 第三步：理解路由模式
 
-MindRouter 提供三种路由模式，通过 `model` 字段指定：
+TierFlow 提供三种路由模式，通过 `model` 字段指定：
 
 | 模式 | model 值 | 说明 |
 |------|----------|------|
@@ -84,6 +84,32 @@ MindRouter 提供三种路由模式，通过 `model` 字段指定：
 | **成本优先** | `auto:cost` | 在满足质量下限的前提下，优先选择最便宜的模型 |
 | **质量优先** | `auto:quality` | 优先选择 Benchmark 评分最高的模型 |
 | **指定模型** | `gpt-4o` / `claude-3.5-sonnet` 等 | 直接指定目标模型，跳过路由 |
+
+```python
+# 自动路由（推荐）
+response = client.chat.completions.create(
+    model="auto",
+    messages=[{"role": "user", "content": "你好"}]
+)
+
+# 成本优先
+response = client.chat.completions.create(
+    model="auto:cost",
+    messages=[{"role": "user", "content": "把以下内容翻译成英文：..."}]
+)
+
+# 质量优先
+response = client.chat.completions.create(
+    model="auto:quality",
+    messages=[{"role": "user", "content": "请分析这段代码的安全漏洞并给出修复方案：..."}]
+)
+
+# 指定模型（跳过路由）
+response = client.chat.completions.create(
+    model="claude-3.5-sonnet",
+    messages=[{"role": "user", "content": "..."}]
+)
+```
 
 ```python
 # 自动路由（推荐）
@@ -126,7 +152,7 @@ response = client.chat.completions.create(
     "completion_tokens": 42,
     "total_tokens": 67
   },
-  "mindrouter": {
+  "tierflow": {
     "requested_model": "auto",
     "routed_model": "gpt-4o-mini",
     "route_reason": "simple_query",
@@ -148,7 +174,7 @@ response = client.chat.completions.create(
 
 ## 第五步：查看仪表盘
 
-登录 [MindRouter 控制台](https://mindrouter.ai/console) 查看：
+登录 [TierFlow 控制台](https://tierflow.ai/console) 查看：
 
 - **请求分布**：各模型被路由到的次数占比
 - **成本趋势**：每日/每周的 API 花费变化
@@ -157,9 +183,9 @@ response = client.chat.completions.create(
 
 ## 常见问题
 
-### MindRouter 会影响响应质量吗？
+### TierFlow 会影响响应质量吗？
 
-不会。MindRouter 的路由引擎会评估每个请求的复杂度，只在模型能力足以胜任时才进行降级路由。你可以在控制台设置质量下限阈值。
+不会。TierFlow 的路由引擎会评估每个请求的复杂度，只在模型能力足以胜任时才进行降级路由。你可以在控制台设置质量下限阈值。
 
 ### 支持流式输出吗？
 

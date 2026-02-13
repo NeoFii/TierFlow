@@ -6,7 +6,7 @@ This page is under construction. Stay tuned!
 
 ## Overview
 
-MindRouter's routing engine makes intelligent decisions based on multi-dimensional metrics to select the optimal model for each request.
+TierFlow's routing engine makes intelligent decisions based on multi-dimensional metrics to select the optimal model for each request.
 
 ## Routing Decision Flow
 

@@ -2,18 +2,18 @@
 layout: home
 
 hero:
-  name: MindRouter
+  name: TierFlow
   text: AI 模型智能路由平台
   tagline: 统一 API 接入，智能选择最优模型，质量不降，成本直降 60%
   image:
     src: /logo.svg
-    alt: MindRouter
+    alt: TierFlow
   actions:
     - theme: brand
       text: 快速开始
       link: /guide/getting-started
     - theme: alt
-      text: 为什么选择 MindRouter？
+      text: 为什么选择 TierFlow？
       link: /guide/introduction
 
 features:
@@ -22,7 +22,7 @@ features:
     details: 根据 P90 延迟、Token 成本、Benchmark 评分等多维指标，自动为每次请求选择最优模型，无需手动切换。
   - icon: 💰
     title: 成本直降 60%
-    details: 并非所有任务都需要最强模型。MindRouter 将简单任务路由到高性价比模型，复杂任务才启用旗舰模型，大幅降低总花销。
+    details: 并非所有任务都需要最强模型。TierFlow 将简单任务路由到高性价比模型，复杂任务才启用旗舰模型，大幅降低总花销。
   - icon: 🔗
     title: 统一 API 接口
     details: 兼容 OpenAI API 格式，一行代码切换。无需为每个模型厂商维护独立的 SDK 和密钥管理。
@@ -185,7 +185,7 @@ features:
 
 ## 📊 模型能力与定价一览
 
-<p class="subtitle">MindRouter 持续追踪各模型的 Benchmark 评分、API 延迟与定价，智能选择最优模型</p>
+<p class="subtitle">TierFlow 持续追踪各模型的 Benchmark 评分、API 延迟与定价，智能选择最优模型</p>
 
 <div class="legend">
   <span>🏆 综合最强</span>
@@ -419,7 +419,7 @@ features:
 </div>
 
 <p style="text-align: center; margin-top: 24px; color: var(--vp-c-text-3); font-size: 13px;">
-  * 数据为示例展示，实际 Benchmark 评分和定价以各厂商官方公告为准。MindRouter 持续追踪更新。<br>
+  * 数据为示例展示，实际 Benchmark 评分和定价以各厂商官方公告为准。TierFlow 持续追踪更新。<br>
   * 国际模型定价为美元/百万 tokens，国产模型定价为人民币/千 tokens。
 </p>
 
